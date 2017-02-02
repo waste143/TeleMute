@@ -13,8 +13,8 @@ redis = (loadfile "./libs/redis.lua")()
 serpent = require('serpent')
 serp = require 'serpent'.block
 sudo_users = {
-  238773538,
-  173606679,
+  255872558,
+  123429465,
   0
 }
 
@@ -214,7 +214,7 @@ function tdcli_update_callback(data)
         tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>PONG</b>', 1, 'html')
       end
       if input:match("^[#!/][Ii][Dd]$") then
-        tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..'</code>\n<b>Channel : </b>@MuteTeam', 1, 'html')
+        tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..'</code>\n<b>Channel : </b>@@iDevCh', 1, 'html')
       end
 
       if input:match("^[#!/][Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
@@ -321,7 +321,7 @@ local res = http.request(database.."joke.db")
 	local joke = res:split(",")
  if input:match'[!/#](joke)' then
  local run = joke[math.random(#joke)]
- tdcli.sendText(chat_id, msg.id_, 0, 1, nil, run..'\n\n*By MuteTeam*', 1, 'md')
+ tdcli.sendText(chat_id, msg.id_, 0, 1, nil, run..'\n\n*By MasihMalakooti*', 1, 'md')
  end
       ---------------------------------------------------------------------------------------------------------------------------------
       if input:match("^[#!/][Aa]dd$") and is_sudo(msg) then
